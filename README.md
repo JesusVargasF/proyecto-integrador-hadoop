@@ -15,7 +15,7 @@ El proyecto consiste en el procesamiento distribuido de un archivo de logs (`acc
 
 Aunque tanto **Hadoop** como **Spark** nos permiten hacer procesamiento distribuido de grandes volúmenes de datos, decidí utilizar **Hadoop** por las siguientes razones:
    - Poder trabajar con archivos comprimidos como `.bzip2`. Permite procesar estos formatos sin necesidad de descomprimirlos manualmente y teniendo un peso mucho menor, lo que mejora la eficiencia.
-   - Utilizar **MapReduce**, que como vimos es muy útil para procesamiento de datos en lotes. Sumado a que disponiamos de un JAR preparado para realizar el conteo de las palabras.
+   - Utilizar **MapReduce**, como vimos es muy útil para procesamiento de datos en lotes. Sumado a que disponiamos de un job preparado para realizar el conteo de las palabras.
 
 En resumen, Hadoop fue la elección más adecuada para este proyecto debido a su compatibilidad con archivos comprimidos y su facilidad para realizarse.
 
