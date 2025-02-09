@@ -38,9 +38,9 @@ Finalmente, los resultados del procesamiento se almacenan nuevamente en HDFS en 
 
 ## **Pasos del Proyecto** 🛠️
 
-### **1. Carga del Archivo `access.log` a un Bucket en AWS S3** 
+### **1. Cargar el Archivo `access.log` a un Bucket en AWS S3** 
 
-El primer paso fue cargar el archivo de logs (`access.log`) en un bucket de **AWS S3**.
+Subí el archivo de logs (`access.log`) en un bucket de **AWS S3**.
 
 ### **2. Compresión a Bzip2 de los Logs con `convertir.py`** 
 
@@ -51,7 +51,7 @@ Para procesar los logs y compromirlos, utilicé un script en Python (`convertir.
 Me conecté a la instancia **master** utilizando **EC2 Instance Connect**.
 ### **4. Transferencia del Archivo desde S3 a una Carpeta Local en el Cluster** 📂
 
-Una vez conectado al cluster EMR, transferí el archivo comprimido (`access.log.bz2`) desde el bucket de S3 a una carpeta local llamada `input` en HDFS. 
+Una vez en la terminal, transferí el archivo comprimido (`access.log.bz2`) desde el bucket de S3 a una carpeta local llamada `input` en HDFS. 
 
   ```aws s3 cp s3://proyecto-final-spark-hadoop-data-engineer/compressed/access.log.bz2```
   
@@ -86,3 +86,10 @@ Una vez completado el procesamiento de los logs utilizando **Hadoop**, se obtuvi
 | `"GET /image"`     | 5,682,613       |
 | `"POST"`           | 139,155         |
 | `"error"`          | 27,678          |
+
+## **Evidencias:**
+
+![get image](https://github.com/user-attachments/assets/a1edacf9-2896-4731-8c28-a6b52d58a855)
+![total post](https://github.com/user-attachments/assets/821644bd-0afa-4929-8a0a-c31150073ac6)
+![salida error](https://github.com/user-attachments/assets/b354650d-da3b-4a20-990b-08705446e2d9)
+
